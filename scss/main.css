@@ -14,7 +14,7 @@ body {
 }
 
 .background {
-  background-image: url("mobile.jpg");
+  background-image: url("../assets/mobile.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -22,7 +22,7 @@ body {
 
 @media (min-width: 700px) {
   .background {
-    background-image: url("desktop.jpg");
+    background-image: url("../assets/desktop.jpg");
   }
 }
 
@@ -66,12 +66,6 @@ nav ul li:first-child a {
 nav ul a {
   text-decoration: none;
   color: #e4c396;
-}
-
-@media (orientation: portrait) {
-  nav ul a {
-    color: #3d3f3e;
-  }
 }
 
 nav ul a:hover {
@@ -320,14 +314,6 @@ header h2 {
   position: relative;
 }
 
-.portfolio .svg-bird {
-  border: 2px solid red;
-  width: 10%;
-  position: absolute;
-  top: -2%;
-  left: 50%;
-}
-
 .portfolio-box {
   background-color: rgba(255, 255, 255, 0.5);
   display: -webkit-box;
@@ -379,19 +365,19 @@ header h2 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   position: relative;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 @media (orientation: portrait) {
   .portfolio-box-content {
     width: 85%;
-    height: 75vh;
+    min-height: 75vh;
   }
 }
 
@@ -469,6 +455,13 @@ header h2 {
   transition: -webkit-transform 950ms cubic-bezier(0.5, 0, 0.5, 1);
   transition: transform 950ms cubic-bezier(0.5, 0, 0.5, 1);
   transition: transform 950ms cubic-bezier(0.5, 0, 0.5, 1), -webkit-transform 950ms cubic-bezier(0.5, 0, 0.5, 1);
+}
+
+@media (min-width: 700px) {
+  .portfolio-box-content img {
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
 }
 
 .portfolio-box-content img:hover {
