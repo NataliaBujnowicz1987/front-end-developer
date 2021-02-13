@@ -5,12 +5,18 @@
           box-sizing: border-box;
 }
 
+html {
+  height: 100%;
+  width: 100%;
+}
+
 body {
   width: 100%;
   min-height: 100vh;
   font-family: "Rosarivo", serif;
   background-color: #000;
   overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .background {

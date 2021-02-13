@@ -27,7 +27,7 @@ const sections = document.querySelectorAll(".scrollSection");
 
 function goToSection(section, anim) {
   gsap.to(window, {
-    scrollTo: {y: section, autoKill: true},
+    scrollTo: {y: section, autoKill: false},
     duration: 0.8
   });
   
