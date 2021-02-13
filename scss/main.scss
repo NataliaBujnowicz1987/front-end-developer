@@ -47,12 +47,15 @@ nav {
         li:first-child a{
             color: $dark-color;
             @media (orientation: portrait) {
-                color: $orange-color;
+                color: $dark-color;
             }
         }
        a {
            text-decoration: none;
            color: $orange-color;
+           @media (orientation: portrait) {
+            color: $dark-color;
+        }
             &:hover {
               font-weight: bold;
             }
@@ -247,7 +250,7 @@ header {
             background-color: #000;
             @media (orientation: portrait) {
                 width: 85%;
-                min-height: 75vh;
+                height: 80vh;
             }
             @media (min-width: $desktop) {
                 width: 90%;

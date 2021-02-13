@@ -59,13 +59,19 @@ nav ul li:first-child a {
 
 @media (orientation: portrait) {
   nav ul li:first-child a {
-    color: #e4c396;
+    color: #3d3f3e;
   }
 }
 
 nav ul a {
   text-decoration: none;
   color: #e4c396;
+}
+
+@media (orientation: portrait) {
+  nav ul a {
+    color: #3d3f3e;
+  }
 }
 
 nav ul a:hover {
@@ -377,7 +383,7 @@ header h2 {
 @media (orientation: portrait) {
   .portfolio-box-content {
     width: 85%;
-    min-height: 75vh;
+    height: 80vh;
   }
 }
 
