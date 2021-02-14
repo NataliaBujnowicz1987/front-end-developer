@@ -27,10 +27,11 @@ body {
 }
 
 .background {
-    background-image: url("../assets/mobile.jpg");
+    background-image: url("../assets/desktop.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    background-position: center, center;
 
     @media (min-width: $desktop) {
         background-image: url("../assets/desktop.jpg");
@@ -272,7 +273,7 @@ header {
 
     @media (orientation: portrait) {
         padding: 3em 0;
-        border: 6px solid red;
+        border: 6px double green;
     }
 
     @media (min-width: 600px) and (max-width: 1100px) and (orientation: landscape) {
