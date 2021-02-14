@@ -27,18 +27,24 @@ body {
 }
 
 .background {
-    background-image: url("../assets/desktop.jpg");
-    background-repeat: no-repeat;
+    background-image: url("../assets/mobile.jpg");
+    background-repeat: repeat;
     background-size: cover;
     background-attachment: fixed;
     background-position: center, center;
 
     @media (min-width: $desktop) {
         background-image: url("../assets/desktop.jpg");
+        background-repeat: no-repeat;
     }
 }
 
 nav {
+    // testy
+    border-bottom: 4px double gold;
+    // testy
+
+
     font-size: 1em;
     position: sticky;
     top: 0;
