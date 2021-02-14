@@ -1,4 +1,5 @@
-$font: 'Rosarivo', serif;
+$font: 'Rosarivo',
+serif;
 $desktop: 700px;
 $green-color: #757e61;
 $orange-color: #e4c396;
@@ -30,7 +31,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    width: 100vw;
+
     @media (min-width: $desktop) {
         background-image: url("../assets/desktop.jpg");
     }
@@ -42,29 +43,36 @@ nav {
     top: 0;
     left: 0;
     z-index: 44;
-    background: rgba(0,0,0,0.1);
+    background: rgba(0, 0, 0, 0.1);
+
     ul {
-       display: flex;
-       justify-content: space-between;
-       padding: 0.5em 1em;
-       list-style: none;
-       @media (min-width: $desktop) {
+        display: flex;
+        justify-content: space-between;
+        padding: 0.5em 1em;
+        list-style: none;
+
+        @media (min-width: $desktop) {
             padding: 0.4em 1em;
         }
-        li:first-child a{
+
+        li:first-child a {
             color: $dark-color;
+
             @media (orientation: portrait) {
                 color: $dark-color;
             }
         }
-       a {
-           text-decoration: none;
-           color: $orange-color;
-           @media (orientation: portrait) {
-            color: $dark-color;
-        }
+
+        a {
+            text-decoration: none;
+            color: $orange-color;
+
+            @media (orientation: portrait) {
+                color: $dark-color;
+            }
+
             &:hover {
-              font-weight: bold;
+                font-weight: bold;
             }
         }
     }
@@ -79,38 +87,46 @@ header {
     text-align: center;
     color: #fff;
     background-color: rgba(0, 0, 0, 0.1);
+
     // svg girl
     .bzinka {
         display: inline-block;
-        position: absolute; 
+        position: absolute;
         top: 40%;
         right: 0%;
+
         @media (orientation: portrait) {
             top: 30%;
             right: 0%;
         }
+
         svg {
             width: 30%;
             height: auto;
+
             @media (orientation: portrait) {
                 width: 45%;
             }
         }
     }
+
     h1 {
         font-size: 2rem;
         margin-bottom: 1rem;
         color: $dark-color;
         text-shadow: 2px 2px 1px #fff;
         cursor: pointer;
+
         @media (min-width: $desktop) {
             font-size: 3rem;
         }
     }
+
     h2 {
         font-size: 1.2rem;
         text-shadow: 1px 1px 2px $dark-color;
         cursor: pointer;
+
         @media (min-width: $desktop) {
             font-size: 1.5rem;
         }
@@ -124,55 +140,66 @@ header {
     width: 100%;
     color: $dark-color;
     height: auto;
+
     @media (orientation: portrait) {
         background-color: rgba(0, 0, 0, 0.5);
         color: #fff;
     }
+
     @media (min-width: $desktop) {
         padding: 0 6em;
     }
-    &-header{
+
+    &-header {
         height: 100vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
+
         span a {
             color: $brown-color;
             font-weight: bold;
             cursor: pointer;
             text-decoration: none;
+
             @media (orientation: portrait) {
                 color: $orange-color;
                 min-height: 100vh;
             }
         }
     }
+
     h2 {
         font-size: 2rem;
         margin-bottom: 3rem;
         text-align: center;
         letter-spacing: 0.2em;
+
         @media (min-width: $desktop) {
             font-size: 3rem;
         }
+
         @media (min-width: 600px) and (max-width: 1100px) and (orientation: landscape) {
             margin-bottom: 1.2rem;
             font-size: 2rem;
-        } 
+        }
     }
+
     p {
         text-align: center;
         line-height: 2em;
         margin-bottom: 1em;
         font-size: 0.9em;
+
         @media (min-width: $desktop) {
             line-height: 2em;
             font-size: 1em;
         }
+
         @media (min-width: 600px) and (max-width: 1100px) and (orientation: landscape) {
             line-height: 1.5em;
             font-size: 0.8em;
-        } 
+        }
     }
 }
 
@@ -184,42 +211,52 @@ header {
     justify-content: space-between;
     padding: 2em 1.2em;
     align-items: center;
+
     @media (min-width: $desktop) {
         width: 60%;
         padding: 4em 1.2em;
         justify-content: space-evenly;
     }
+
     @media (min-width: 600px) and (max-width: 1100px) and (orientation: landscape) {
         width: 80%;
         padding: 1.5em 1.2em 0 1.2em;
-    } 
+    }
+
     i {
         font-size: 1.3em;
         color: #fff;
         transition: all 0.4s linear;
         color: $orange-color;
+
         &:hover {
-           color:$brown-color;
+            color: $brown-color;
         }
     }
+
     @media (min-width: $desktop) {
         a:nth-child(1) i {
             color: $dark-color;
+
             &:hover {
-                color:$green-color;
-             }
+                color: $green-color;
+            }
         }
+
         a:nth-child(3) i {
             color: $green-color;
+
             &:hover {
-                color:$orange-color;
-             }
+                color: $orange-color;
+            }
         }
+
         a:nth-child(4) i {
             color: $brown-color;
+
             &:hover {
-                color:$dark-color;
-             }
+                color: $dark-color;
+            }
         }
     }
 }
@@ -234,134 +271,165 @@ header {
     // position: relative;
 
     @media (orientation: portrait) {
-       padding: 3em 0;
-       border: 6px solid red;
+        padding: 3em 0;
+        border: 6px solid red;
     }
 
     @media (min-width: 600px) and (max-width: 1100px) and (orientation: landscape) {
         padding: 3em 0;
         // border: 6px solid green;
-    } 
+    }
 
     &-box {
         @media (orientation: portrait) {
             width: 85%;
             height: 90vh;
         }
+
         @media (min-width: $desktop) {
             width: 60%;
             height: 70vh;
         }
+
         @media (min-width: 600px) and (max-width: 1100px) and (orientation: landscape) {
             width: 80%;
             height: 85vh;
-        } 
+        }
+
         background-color: rgba(255, 255, 255, 0.5);
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
         align-items: center;
         border-radius: 50px;
+
         &-content {
             overflow: hidden;
             border-radius: 20px 20px 0 0;
             background-color: #000;
-            @media (orientation: portrait) {
-                width: 85%;
-                height: 80vh;
-            }
-            @media (min-width: $desktop) {
-                width: 90%;
-                height: 80%;
-            }
             color: $orange-color;
             display: flex;
             flex-direction: column;
             align-items: center;
             position: relative;
-            justify-content: center;
-            @media (min-width: 600px) and (max-width: 1100px) and (orientation: landscape) {
+
+            @media (min-width: $desktop) {
+                width: 90%;
+                height: 80%;
+                justify-content: center;
+            }
+
+            @media (orientation: portrait) {
+                width: 85%;
+                height: 75vh;
+                justify-content: flex-start;
+            }
+
+            @media (min-width: 600px) and (max-width: 1000px) and (orientation: landscape) {
                 width: 85%;
                 height: 70vh;
-            } 
+                justify-content: flex-start;
+            }
+
             .video-mobile {
                 @media (min-width: $desktop) {
-                   display: none;
+                    display: none;
                 }
+
                 @media (orientation: portrait) {
-                   display: block;
+                    display: block;
                 }
+
                 @media (min-width: 600px) and (max-width: 1100px) and (orientation: landscape) {
                     display: none;
-                } 
+                }
             }
+
             .video-desktop {
                 @media (orientation: portrait) {
                     display: none;
-                 }
+                }
             }
+
             video {
                 width: 100%;
                 height: 100%;
-            } 
+            }
+
             .img-mobile {
                 @media (min-width: $desktop) {
-                   display: none;
+                    display: none;
                 }
+
                 @media (orientation: portrait) {
-                   display: block;
+                    display: block;
                 }
+
                 @media (min-width: 600px) and (max-width: 1100px) and (orientation: landscape) {
                     display: none;
-                } 
+                }
             }
+
             .img-desktop {
                 @media (orientation: portrait) {
                     display: none;
-                 }
+                }
             }
+
             img {
                 width: 100%;
                 height: 100%;
+
                 @media (min-width: $desktop) {
-                   object-fit: cover;
+                    object-fit: cover;
                 }
+
                 transition: transform 950ms cubic-bezier(.5, 0, .5, 1);
+
                 &:hover {
                     transform: scale(1.2);
                 }
             }
+
             h2 {
                 text-align: center;
                 font-size: 1.4em;
                 padding: 1em;
+
                 @media (min-width: $desktop) {
                     font-size: 2.5em;
                     padding-bottom: 1.5em;
                 }
+
                 @media (min-width: 600px) and (max-width: 1100px) and (orientation: landscape) {
                     font-size: 1.5em;
-                } 
+                }
+
                 @media (min-width: 600px) and (max-width: 800px) and (orientation: portrait) {
                     font-size: 3vh;
                 }
             }
+
             p {
                 font-size: 0.8em;
                 width: 80%;
                 padding-bottom: 1em;
+
                 @media (min-width: $desktop) {
                     font-size: 1.2em;
                 }
+
                 @media (min-width: 600px) and (max-width: 1100px) and (orientation: landscape) {
-                    font-size: 1em;
+                    font-size: 0.8em;
                     padding-bottom: 1.2em;
                     width: 90%;
-                } 
+                }
+
                 @media (min-width: 600px) and (max-width: 800px) and (orientation: portrait) {
                     font-size: 1.5vh;
                 }
             }
+
             svg {
                 width: 10%;
                 position: absolute;
@@ -370,6 +438,7 @@ header {
                 top: 10%;
             }
         }
+
         .txt-scroll {
             overflow: scroll;
         }
@@ -379,51 +448,66 @@ header {
             justify-content: space-between;
             align-items: center;
             width: 80%;
+
             @media (min-width: $desktop) {
                 flex-direction: row;
                 width: 90%;
             }
+
             @media (min-width: 600px) and (max-width: 1100px) and (orientation: landscape) {
                 width: 80%;
-            } 
+            }
+
             button {
                 padding: 0.5em 2.5em;
+
                 @media (orientation: portrait) {
                     padding: 0.3em 1em;
                 }
+
                 @media (min-width: 600px) and (max-width: 1100px) and (orientation: landscape) {
                     padding: 0.3em 1em;
                     font-size: 0.7em;
-                } 
+                }
+
                 border-radius: 40px;
                 border: none;
                 background-color: $brown-color;
                 transition: all 2s linear;
+
                 &:nth-child(3) {
                     background-color: $green-color;
                     color: #fff;
                 }
+
                 a {
                     text-decoration: none;
+
                     &:last-child {
                         color: #fff;
                     }
                 }
+
                 &:hover {
                     transform: scale(1.2);
                 }
             }
+
             i {
-               font-size: 2em;
+                font-size: 2em;
+
                 @media (orientation: portrait) {
                     font-size: 1.5em;
                 }
+
                 @media (min-width: 600px) and (max-width: 1100px) and (orientation: landscape) {
                     font-size: 1.5em;
-                } 
+                }
+
                 cursor: pointer;
                 color: $dark-color;
                 transition: all 2s linear;
+
                 &:hover {
                     transform: scale(1.2);
                 }
@@ -436,34 +520,43 @@ footer {
     background-color: rgba(0, 0, 0, 0.1);
     padding: 1em 0em;
     align-items: center;
+
     @media (min-width: $desktop) {
         padding: 2em 1.2em;
     }
+
     div {
         display: flex;
         justify-content: space-around;
         align-items: center;
         width: 90%;
         margin: 0 auto;
+
         @media (min-width: $desktop) {
             width: 75%;
         }
+
         @media (min-width: 600px) and (max-width: 1100px) and (orientation: landscape) {
             width: 90%;
-        } 
+        }
     }
+
     i {
         font-size: 1.2em;
+
         @media (min-width: $desktop) {
             font-size: 2em;
         }
+
         @media (min-width: 600px) and (max-width: 1100px) and (orientation: landscape) {
             font-size: 1.3em;
-        } 
+        }
+
         transition: all 0.4s linear;
         color: $dark-color;
+
         &:hover {
-           color:$orange-color;
+            color: $orange-color;
         }
     }
 }
