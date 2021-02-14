@@ -47,7 +47,7 @@ sections.forEach(section => {
     
     ScrollTrigger.create({
       trigger: section,
-      start: "top top",
+      start: "bottom bottom",
       onEnterBack: () => goToSection(section),
     });
   });
