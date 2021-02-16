@@ -36,6 +36,8 @@ function goToSection(section, anim) {
   }
 }
 
+
+if (window.innerWidth > 737)  {
 sections.forEach(section => {
     const intoAnim = gsap.timeline({paused: true})
       .from(section.querySelector(".portfolio-box"), {xPercent: 50, duration: 1})
@@ -51,6 +53,8 @@ sections.forEach(section => {
       onEnterBack: () => goToSection(section),
     });
   });
+}
+
 
 // portfolio slider
   let slideIndex = [1,1,1,1,1,1];;
