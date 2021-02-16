@@ -19,7 +19,8 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  background-position: center, center;
+  background-position: 50% 50%;
+  width: 100%;
 }
 
 @media (min-width: 700px) {
