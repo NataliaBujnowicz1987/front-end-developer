@@ -19,13 +19,14 @@ $dark-color: #3d3f3e;
 
 body {
     width: 100%;
-    min-height: 100vh;
+    // min-height: 100vh;
     font-family: $font;
     background-color: #000;
     overflow-x: hidden;
-    overflow-y: auto;
+    // overflow-y: auto;
 }
 
+// background img
 #portfolio:before {
     content: "";
     display: block;
@@ -43,7 +44,6 @@ body {
 
     @media (min-width: $desktop) {
         background-image: url("../assets/desktop.jpg");
-
     }
 }
 
@@ -77,10 +77,6 @@ nav {
     z-index: 44;
     background: rgba(0, 0, 0, 0.1);
 
-    @media (orientation: portrait) {
-        background: rgba(0, 0, 0, 0.3);
-    }
-
     ul {
         display: flex;
         justify-content: space-between;
@@ -94,9 +90,9 @@ nav {
         li:first-child a {
             color: $dark-color;
 
-            @media (orientation: portrait) {
-                color: $orange-color;
-            }
+            // @media (orientation: portrait) {
+            //     color: $orange-color;
+            // }
         }
 
         a {
@@ -104,7 +100,7 @@ nav {
             color: $orange-color;
 
             @media (orientation: portrait) {
-                color: $orange-color;
+                color: $dark-color;
             }
 
             &:hover {
@@ -178,7 +174,8 @@ header {
     height: auto;
 
     @media (orientation: portrait) {
-        background-color: rgba(0, 0, 0, 0.5);
+        background: rgb(0, 0, 0);
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.42619054457720584) 67%, rgba(0, 0, 0, 0.100) 100%);
         color: #fff;
     }
 
@@ -270,32 +267,32 @@ header {
         }
     }
 
-    @media (min-width: $desktop) {
-        a:nth-child(1) i {
-            color: $dark-color;
 
-            &:hover {
-                color: $green-color;
-            }
-        }
+    a:nth-child(1) i {
+        color: $dark-color;
 
-        a:nth-child(3) i {
+        &:hover {
             color: $green-color;
-
-            &:hover {
-                color: $orange-color;
-            }
         }
+    }
 
-        a:nth-child(4) i {
-            color: $brown-color;
+    a:nth-child(3) i {
+        color: $green-color;
 
-            &:hover {
-                color: $dark-color;
-            }
+        &:hover {
+            color: $orange-color;
+        }
+    }
+
+    a:nth-child(4) i {
+        color: $brown-color;
+
+        &:hover {
+            color: $dark-color;
         }
     }
 }
+
 
 // portfolio page
 .portfolio {
@@ -410,15 +407,29 @@ header {
                 }
             }
 
+            @keyframes imgScale {
+                0% {
+
+                    transform: scale(1.5);
+                    opacity: 0;
+                }
+
+                100% {
+                    transform: scale(1);
+                    opacity: 1;
+                }
+            }
+
             img {
                 width: 100%;
                 height: 100%;
+                animation: imgScale 3s linear;
 
                 @media (min-width: $desktop) {
                     object-fit: cover;
                 }
 
-                transition: transform 950ms cubic-bezier(.5, 0, .5, 1);
+                transition: transform 3s cubic-bezier(.5, 0, .5, 1);
 
                 &:hover {
                     transform: scale(1.2);
@@ -461,6 +472,7 @@ header {
 
                 @media (min-width: 600px) and (max-width: 800px) and (orientation: portrait) {
                     font-size: 1.5vh;
+
                 }
             }
 
@@ -477,7 +489,7 @@ header {
             overflow: scroll;
         }
 
-        .buttons {
+        .buttons-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -492,8 +504,25 @@ header {
                 width: 80%;
             }
 
+            .buttons {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                width: 80%;
+
+                @media (orientation: portrait) {
+                    flex-direction: column;
+                    width: auto;
+                    justify-content: space-between;
+                }
+
+            }
+
             button {
                 padding: 0.5em 2.5em;
+                margin: 0.5em;
+                // display: flex;
+                // flex-direction: column;
 
                 @media (orientation: portrait) {
                     padding: 0.3em 1em;
@@ -506,7 +535,8 @@ header {
 
                 border-radius: 40px;
                 border: none;
-                background-color: $brown-color;
+                background-color: $dark-color;
+                box-shadow: 1px 1px 2px $green-color;
                 transition: all 2s linear;
 
                 &:nth-child(3) {
@@ -531,7 +561,7 @@ header {
                 font-size: 2em;
 
                 @media (orientation: portrait) {
-                    font-size: 1.5em;
+                    // font-size: 1.5em;
                 }
 
                 @media (min-width: 600px) and (max-width: 1100px) and (orientation: landscape) {
@@ -540,11 +570,45 @@ header {
 
                 cursor: pointer;
                 color: $dark-color;
-                transition: all 2s linear;
+                transition: all 1s linear;
+                position: relative;
 
-                &:hover {
-                    transform: scale(1.2);
+                // hover animation
+                &:first-child {
+                    &:hover {
+                        animation: arrowLeftMove 1.5s linear infinite alternate;
+                    }
                 }
+
+                &:last-child {
+                    &:hover {
+                        animation: arrowRightMove 1.5s linear infinite alternate;
+                    }
+                }
+
+                @keyframes arrowLeftMove {
+                    from {
+                        left: 0;
+                    }
+
+                    to {
+                        left: -15px
+                    }
+                }
+
+                @keyframes arrowRightMove {
+                    from {
+                        left: 0;
+                    }
+
+                    to {
+                        left: 15px
+                    }
+                }
+
+
+
+
             }
         }
     }
@@ -577,6 +641,7 @@ footer {
 
     i {
         font-size: 1.2em;
+        text-shadow: 1px 1px 2px $brown-color;
 
         @media (min-width: $desktop) {
             font-size: 2em;
@@ -587,10 +652,10 @@ footer {
         }
 
         transition: all 0.4s linear;
-        color: $dark-color;
+        color: $orange-color;
 
         &:hover {
-            color: $orange-color;
+            color: $dark-color;
         }
     }
 }
