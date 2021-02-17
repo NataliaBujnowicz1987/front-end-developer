@@ -15,17 +15,23 @@ body {
 }
 
 .background {
-  background-image: url("../assets/mobile3.jpg");
+  background-image: url("../assets/mobile.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  max-width: 95vw !important;
-  border: 2px solid red;
+  background-position: center, center;
 }
 
 @media (min-width: 700px) {
   .background {
     background-image: url("../assets/desktop.jpg");
+  }
+}
+
+@media (orientation: portrait) {
+  .background {
+    background-size: 100% 100%;
+    border: 5px solid red;
   }
 }
 

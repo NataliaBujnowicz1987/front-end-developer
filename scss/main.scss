@@ -27,20 +27,25 @@ body {
 }
 
 .background {
-    background-image: url("../assets/mobile3.jpg");
+    background-image: url("../assets/mobile.jpg");
     // background-image: url("../assets/mobile2.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    // background-position: center, center;
-    // background-position: 50% 50%;
-    max-width: 95vw !important;
-    border: 2px solid red;
+    background-position: center, center;
+
 
 
     @media (min-width: $desktop) {
         background-image: url("../assets/desktop.jpg");
+
     }
+
+    @media (orientation: portrait) {
+        background-size: 100% 100%;
+        border: 5px solid red;
+    }
+
 }
 
 nav {
