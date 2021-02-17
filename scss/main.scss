@@ -34,16 +34,16 @@ body {
     background-attachment: fixed;
     background-position: center, center;
 
-
-
     @media (min-width: $desktop) {
         background-image: url("../assets/desktop.jpg");
 
     }
 
     @media (orientation: portrait) {
-        background-size: 100% 100%;
-        border: 5px solid red;
+        background-size: 100% auto;
+        border: 5px solid blue;
+        background-attachment: fixed;
+        background-position: top, center;
     }
 
 }
