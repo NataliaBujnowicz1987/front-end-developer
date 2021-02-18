@@ -12,18 +12,11 @@ $dark-color: #3d3f3e;
     box-sizing: border-box;
 }
 
-// html {
-//     height: 100%;
-//     width: 100%;
-// }
-
 body {
     width: 100%;
-    // min-height: 100vh;
     font-family: $font;
     background-color: #000;
     overflow-x: hidden;
-    // overflow-y: auto;
 }
 
 // background img
@@ -33,8 +26,10 @@ body {
     position: fixed;
     left: 0;
     top: 0;
-    width: 100%;
-    height: 100%;
+    right: 0;
+    bottom: 0;
+    // width: 100%;
+    // height: auto;
     z-index: -10;
     background: url("../assets/mobile.jpg") no-repeat center center;
     -webkit-background-size: cover;
@@ -47,28 +42,6 @@ body {
     }
 }
 
-// .background {
-//     background-image: url("../assets/mobile.jpg");
-//     // background-image: url("../assets/mobile2.jpg");
-//     background-repeat: no-repeat;
-//     background-size: cover;
-//     background-attachment: fixed;
-//     background-position: center, center;
-
-//     @media (min-width: $desktop) {
-//         background-image: url("../assets/desktop.jpg");
-
-//     }
-
-//     @media (orientation: portrait) {
-//         background-size: 100% auto;
-//         border: 5px solid blue;
-//         background-attachment: fixed;
-//         background-position: top, center;
-//     }
-
-// }
-
 nav {
     font-size: 1em;
     position: sticky;
@@ -76,33 +49,23 @@ nav {
     left: 0;
     z-index: 44;
     background: rgba(0, 0, 0, 0.1);
-
     ul {
         display: flex;
         justify-content: space-between;
         padding: 0.5em 1em;
         list-style: none;
-
         @media (min-width: $desktop) {
             padding: 0.4em 1em;
         }
-
         li:first-child a {
             color: $dark-color;
-
-            // @media (orientation: portrait) {
-            //     color: $orange-color;
-            // }
         }
-
         a {
             text-decoration: none;
             color: $orange-color;
-
             @media (orientation: portrait) {
                 color: $dark-color;
             }
-
             &:hover {
                 font-weight: bold;
             }
@@ -126,16 +89,13 @@ header {
         position: absolute;
         top: 40%;
         right: 0%;
-
         @media (orientation: portrait) {
             top: 30%;
             right: 0%;
         }
-
         svg {
             width: 30%;
             height: auto;
-
             @media (orientation: portrait) {
                 width: 45%;
             }
@@ -148,7 +108,6 @@ header {
         color: $dark-color;
         text-shadow: 2px 2px 1px #fff;
         cursor: pointer;
-
         @media (min-width: $desktop) {
             font-size: 3rem;
         }
@@ -158,7 +117,6 @@ header {
         font-size: 1.2rem;
         text-shadow: 1px 1px 2px $dark-color;
         cursor: pointer;
-
         @media (min-width: $desktop) {
             font-size: 1.5rem;
         }
@@ -171,30 +129,22 @@ header {
     color: #fff;
     width: 100%;
     color: $dark-color;
-    height: auto;
-
+    max-height: 100vh;
     @media (orientation: portrait) {
         background: rgb(0, 0, 0);
         background: linear-gradient(0deg, rgba(0, 0, 0, 0.42619054457720584) 67%, rgba(0, 0, 0, 0.100) 100%);
         color: #fff;
     }
-
-    @media (min-width: $desktop) {
-        padding: 0 6em;
-    }
-
     &-header {
         height: 100vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
-
         span a {
             color: $brown-color;
             font-weight: bold;
             cursor: pointer;
             text-decoration: none;
-
             @media (orientation: portrait) {
                 color: $orange-color;
                 min-height: 100vh;
@@ -207,11 +157,9 @@ header {
         margin-bottom: 3rem;
         text-align: center;
         letter-spacing: 0.2em;
-
         @media (min-width: $desktop) {
             font-size: 3rem;
         }
-
         @media (min-width: 600px) and (max-width: 1100px) and (orientation: landscape) {
             margin-bottom: 1.2rem;
             font-size: 2rem;
@@ -223,12 +171,10 @@ header {
         line-height: 2em;
         margin-bottom: 1em;
         font-size: 0.9em;
-
         @media (min-width: $desktop) {
             line-height: 2em;
             font-size: 1em;
         }
-
         @media (min-width: 600px) and (max-width: 1100px) and (orientation: landscape) {
             line-height: 1.5em;
             font-size: 0.8em;
@@ -242,15 +188,13 @@ header {
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    padding: 2em 1.2em;
+    padding: 2em 1.2em 0 1.2em;
     align-items: center;
-
     @media (min-width: $desktop) {
         width: 60%;
         padding: 4em 1.2em;
         justify-content: space-evenly;
     }
-
     @media (min-width: 600px) and (max-width: 1100px) and (orientation: landscape) {
         width: 80%;
         padding: 1.5em 1.2em 0 1.2em;
@@ -261,16 +205,13 @@ header {
         color: #fff;
         transition: all 0.4s linear;
         color: $orange-color;
-
         &:hover {
             color: $brown-color;
         }
     }
 
-
     a:nth-child(1) i {
         color: $dark-color;
-
         &:hover {
             color: $green-color;
         }
@@ -278,7 +219,6 @@ header {
 
     a:nth-child(3) i {
         color: $green-color;
-
         &:hover {
             color: $orange-color;
         }
@@ -286,7 +226,6 @@ header {
 
     a:nth-child(4) i {
         color: $brown-color;
-
         &:hover {
             color: $dark-color;
         }
@@ -301,39 +240,31 @@ header {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    // position: relative;
-
     @media (orientation: portrait) {
         padding: 3em 0;
     }
-
     @media (min-width: 600px) and (max-width: 1100px) and (orientation: landscape) {
         padding: 3em 0;
     }
-
     &-box {
         @media (orientation: portrait) {
             width: 85%;
             height: 90vh;
         }
-
         @media (min-width: $desktop) {
             width: 60%;
             height: 70vh;
         }
-
         @media (min-width: 600px) and (max-width: 1100px) and (orientation: landscape) {
             width: 80%;
             height: 85vh;
         }
-
         background-color: rgba(255, 255, 255, 0.5);
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
         align-items: center;
         border-radius: 50px;
-
         &-content {
             overflow: hidden;
             border-radius: 20px 20px 0 0;
@@ -343,34 +274,29 @@ header {
             flex-direction: column;
             align-items: center;
             position: relative;
-
             @media (min-width: $desktop) {
                 width: 90%;
                 height: 80%;
                 justify-content: center;
             }
-
             @media (orientation: portrait) {
                 width: 85%;
-                height: 75vh;
-                justify-content: flex-start;
+                height: 70vh;
+                // justify-content: flex-start;
+                justify-content: center;
             }
-
             @media (min-width: 600px) and (max-width: 1000px) and (orientation: landscape) {
                 width: 85%;
                 height: 70vh;
                 justify-content: flex-start;
             }
-
             .video-mobile {
                 @media (min-width: $desktop) {
                     display: none;
                 }
-
                 @media (orientation: portrait) {
                     display: block;
                 }
-
                 @media (min-width: 600px) and (max-width: 1100px) and (orientation: landscape) {
                     display: none;
                 }
@@ -381,56 +307,44 @@ header {
                     display: none;
                 }
             }
-
             video {
                 width: 100%;
                 height: 100%;
             }
-
             .img-mobile {
                 @media (min-width: $desktop) {
                     display: none;
                 }
-
                 @media (orientation: portrait) {
                     display: block;
                 }
-
                 @media (min-width: 600px) and (max-width: 1100px) and (orientation: landscape) {
                     display: none;
                 }
             }
-
             .img-desktop {
                 @media (orientation: portrait) {
                     display: none;
                 }
             }
-
             @keyframes imgScale {
                 0% {
-
                     transform: scale(1.5);
                     opacity: 0;
                 }
-
                 100% {
                     transform: scale(1);
                     opacity: 1;
                 }
             }
-
             img {
                 width: 100%;
                 height: 100%;
                 animation: imgScale 3s linear;
-
                 @media (min-width: $desktop) {
                     object-fit: cover;
                 }
-
                 transition: transform 3s cubic-bezier(.5, 0, .5, 1);
-
                 &:hover {
                     transform: scale(1.2);
                 }
@@ -440,16 +354,13 @@ header {
                 text-align: center;
                 font-size: 1.4em;
                 padding: 1em;
-
                 @media (min-width: $desktop) {
                     font-size: 2.5em;
                     padding-bottom: 1.5em;
                 }
-
                 @media (min-width: 600px) and (max-width: 1100px) and (orientation: landscape) {
                     font-size: 1.5em;
                 }
-
                 @media (min-width: 600px) and (max-width: 800px) and (orientation: portrait) {
                     font-size: 3vh;
                 }
@@ -459,20 +370,16 @@ header {
                 font-size: 0.8em;
                 width: 80%;
                 padding-bottom: 1em;
-
                 @media (min-width: $desktop) {
                     font-size: 1.2em;
                 }
-
                 @media (min-width: 600px) and (max-width: 1100px) and (orientation: landscape) {
                     font-size: 0.8em;
                     padding-bottom: 1.2em;
                     width: 90%;
                 }
-
                 @media (min-width: 600px) and (max-width: 800px) and (orientation: portrait) {
                     font-size: 1.5vh;
-
                 }
             }
 
@@ -488,70 +395,55 @@ header {
         .txt-scroll {
             overflow: scroll;
         }
-
         .buttons-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
             width: 80%;
-
             @media (min-width: $desktop) {
                 flex-direction: row;
                 width: 90%;
             }
-
             @media (min-width: 600px) and (max-width: 1100px) and (orientation: landscape) {
                 width: 80%;
             }
-
             .buttons {
                 display: flex;
                 flex-direction: row;
                 justify-content: space-around;
                 width: 80%;
-
                 @media (orientation: portrait) {
                     flex-direction: column;
                     width: auto;
                     justify-content: space-between;
                 }
-
             }
 
             button {
                 padding: 0.5em 2.5em;
                 margin: 0.5em;
-                // display: flex;
-                // flex-direction: column;
-
                 @media (orientation: portrait) {
                     padding: 0.3em 1em;
                 }
-
                 @media (min-width: 600px) and (max-width: 1100px) and (orientation: landscape) {
                     padding: 0.3em 1em;
                     font-size: 0.7em;
                 }
-
                 border-radius: 40px;
                 border: none;
                 background-color: $dark-color;
                 box-shadow: 1px 1px 2px $green-color;
                 transition: all 2s linear;
-
                 &:nth-child(3) {
                     background-color: $green-color;
                     color: #fff;
                 }
-
                 a {
                     text-decoration: none;
-
                     &:last-child {
                         color: #fff;
                     }
                 }
-
                 &:hover {
                     transform: scale(1.2);
                 }
@@ -559,56 +451,40 @@ header {
 
             i {
                 font-size: 2em;
-
-                @media (orientation: portrait) {
-                    // font-size: 1.5em;
-                }
-
                 @media (min-width: 600px) and (max-width: 1100px) and (orientation: landscape) {
                     font-size: 1.5em;
                 }
-
                 cursor: pointer;
                 color: $dark-color;
                 transition: all 1s linear;
                 position: relative;
-
                 // hover animation
                 &:first-child {
                     &:hover {
                         animation: arrowLeftMove 1.5s linear infinite alternate;
                     }
                 }
-
                 &:last-child {
                     &:hover {
                         animation: arrowRightMove 1.5s linear infinite alternate;
                     }
                 }
-
                 @keyframes arrowLeftMove {
                     from {
                         left: 0;
                     }
-
                     to {
                         left: -15px
                     }
                 }
-
                 @keyframes arrowRightMove {
                     from {
                         left: 0;
                     }
-
                     to {
                         left: 15px
                     }
                 }
-
-
-
-
             }
         }
     }
@@ -618,22 +494,18 @@ footer {
     background-color: rgba(0, 0, 0, 0.1);
     padding: 1em 0em;
     align-items: center;
-
     @media (min-width: $desktop) {
         padding: 2em 1.2em;
     }
-
     div {
         display: flex;
         justify-content: space-around;
         align-items: center;
         width: 90%;
         margin: 0 auto;
-
         @media (min-width: $desktop) {
             width: 75%;
         }
-
         @media (min-width: 600px) and (max-width: 1100px) and (orientation: landscape) {
             width: 90%;
         }
@@ -642,15 +514,12 @@ footer {
     i {
         font-size: 1.2em;
         text-shadow: 1px 1px 2px $brown-color;
-
         @media (min-width: $desktop) {
             font-size: 2em;
         }
-
         @media (min-width: 600px) and (max-width: 1100px) and (orientation: landscape) {
             font-size: 1.3em;
         }
-
         transition: all 0.4s linear;
         color: $orange-color;
 

@@ -18,8 +18,8 @@ body {
   position: fixed;
   left: 0;
   top: 0;
-  width: 100%;
-  height: 100%;
+  right: 0;
+  bottom: 0;
   z-index: -10;
   background: url("../assets/mobile.jpg") no-repeat center center;
   background-size: cover;
@@ -154,7 +154,7 @@ header h2 {
   color: #fff;
   width: 100%;
   color: #3d3f3e;
-  height: auto;
+  max-height: 100vh;
 }
 
 @media (orientation: portrait) {
@@ -163,12 +163,6 @@ header h2 {
     background: -webkit-gradient(linear, left bottom, left top, color-stop(67%, rgba(0, 0, 0, 0.426191)), to(rgba(0, 0, 0, 0.1)));
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.426191) 67%, rgba(0, 0, 0, 0.1) 100%);
     color: #fff;
-  }
-}
-
-@media (min-width: 700px) {
-  .about {
-    padding: 0 6em;
   }
 }
 
@@ -250,7 +244,7 @@ header h2 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 2em 1.2em;
+  padding: 2em 1.2em 0 1.2em;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -405,10 +399,10 @@ header h2 {
 @media (orientation: portrait) {
   .portfolio-box-content {
     width: 85%;
-    height: 75vh;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    height: 70vh;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 

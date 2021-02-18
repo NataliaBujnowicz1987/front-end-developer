@@ -6,38 +6,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Natalia Bujnowicz - front end developer</title>
     <meta name="description"
-        content="I'm a front-end developer who was born in Poland, lives in Ireland. Fascinated by developing dynamic and interactive websites and applications. HTML, CSS, JS, REACT.JS, SASS, GSAP." />
+        content="I'm a front-end developer who was born in Poland, lives in Ireland. Fascinated by developing dynamic and interactive websites and applications. I create websites using web tech such us HTML, CSS, JS, REACT.JS, SASS, GSAP." />
     <meta name="keywords"
         content="front end developer, web developer, javascript developer, html css developer, react developer, website developer, web portfolio, website portfolio, webpage portfolio" />
     <!-- styles -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Rosarivo&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="scss/main.css">
-    <!-- <link rel="stylesheet" href="scss/loader.css"> -->
+    <link rel="stylesheet" href="scss/loader.css">
     <script src="https://kit.fontawesome.com/2e296f9362.js" crossorigin="anonymous"></script>
 
     <script>
-        window.onbeforeunload = function () {
-            window.scrollTo(0, 0);
-        }
+        // window.onbeforeunload = function () {
+        //     window.scrollTo(0, 0);
+        // }
+
+        // loading page
+        document.onreadystatechange = function() { 
+            if (document.readyState !== "complete") { 
+                document.querySelector("#portfolio").style.visibility = "hidden"; 
+                    ocument.querySelector("#loader").style.visibility = "visible"; 
+            } else { 
+                document.querySelector("#loader").style.display = "none"; 
+                document.querySelector("#portfolio").style.visibility = "visible"; 
+            } 
+        }; 
     </script>
 
     <!-- <script>
-            document.onreadystatechange = function() { 
-                if (document.readyState !== "complete") { 
-                    document.querySelector("#portfolio").style.visibility = "hidden"; 
-                    document.querySelector("#loader").style.visibility = "visible"; 
-                } else { 
-                    document.querySelector("#loader").style.display = "none"; 
-                    document.querySelector("#portfolio").style.visibility = "visible"; 
-                } 
-            }; 
+           
         </script> -->
 </head>
 
 <body>
     <!-- loader -->
-    <!-- <div id="loader" class="loader">
+    <div id="loader" class="loader">
             <div class="loader-inner">
                 <div class="loader-line-wrap">
                     <div class="loader-line"></div>
@@ -55,7 +58,7 @@
                     <div class="loader-line"></div>
                 </div>
             </div>
-        </div>  -->
+        </div> 
 
     <div id='portfolio'>
         <div class="background">
