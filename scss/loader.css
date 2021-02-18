@@ -68,35 +68,35 @@
   }
   
   .loader-line-wrap:nth-child(1) .loader-line {
-    border-color: #f9f871;
+    border-color: #B46F36;
     height: 90px;
     width: 90px;
     top: 7px;
   }
   
   .loader-line-wrap:nth-child(2) .loader-line {
-    border-color: #b8e067;
+    border-color: #E4C396;
     height: 76px;
     width: 76px;
     top: 14px;
   }
   
   .loader-line-wrap:nth-child(3) .loader-line {
-    border-color: #78c664;
+    border-color: #C2C5AA;
     height: 62px;
     width: 62px;
     top: 21px;
   }
   
   .loader-line-wrap:nth-child(4) .loader-line {
-    border-color: #2fab63;
+    border-color: #757E61;
     height: 48px;
     width: 48px;
     top: 28px;
   }
   
   .loader-line-wrap:nth-child(5) .loader-line {
-    border-color: #007160;
+    border-color: #3D3F3E;
     height: 34px;
     width: 34px;
     top: 35px;

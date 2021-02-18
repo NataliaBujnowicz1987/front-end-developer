@@ -393,6 +393,7 @@ header h2 {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    padding-top: 1em;
   }
 }
 
@@ -527,7 +528,6 @@ header h2 {
 @media (min-width: 700px) {
   .portfolio-box-content h2 {
     font-size: 2.5em;
-    padding-bottom: 1.5em;
   }
 }
 

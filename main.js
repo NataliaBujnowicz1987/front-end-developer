@@ -5,6 +5,7 @@ gsap.registerPlugin(ScrollTrigger);
 tl.from('#portfolio', { duration: 5, opacity: 0, ease: "slow(0.7, 0.7, false)" })
 // header animation
 gsap.from('.header', { duration: 4, delay: 1, opacity: 0, y: "random(-400, 400)", ease: "back.out(1.7)", stagger: 1 })
+
 // girl flower animatiomn
 const flower = document.getElementById('flower');
 tl.staggerFromTo(flower.children, 1.1,
@@ -12,6 +13,7 @@ tl.staggerFromTo(flower.children, 1.1,
   { scale: 1, opacity: 1 },
   .3
 )
+
 // about section animation  
 gsap.from('.about-header', {
   scrollTrigger: {
