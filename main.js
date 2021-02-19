@@ -1,4 +1,4 @@
-let tl = gsap.timeline({ defaults: { duration: 1 } });
+let tl = gsap.timeline();
 gsap.registerPlugin(ScrollTrigger);
 
 // background animation
