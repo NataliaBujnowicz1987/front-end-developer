@@ -45,22 +45,22 @@ document.onreadystatechange = function () {
         anim.restart();
       }
     }
-    // if (window.innerWidth > 737) {
-    sections.forEach(section => {
-      const intoAnim = gsap.timeline({ paused: true })
-        .from(section.querySelector(".portfolio-box"), { xPercent: 50, duration: 1 })
+    if (window.innerWidth > 737) {
+      sections.forEach(section => {
+        const intoAnim = gsap.timeline({ paused: true })
+          .from(section.querySelector(".portfolio-box"), { xPercent: 50, duration: 1 })
 
-      ScrollTrigger.create({
-        trigger: section,
-        onEnter: () => goToSection(section, intoAnim),
-      });
+        ScrollTrigger.create({
+          trigger: section,
+          onEnter: () => goToSection(section, intoAnim),
+        });
 
-      ScrollTrigger.create({
-        trigger: section,
-        start: "bottom bottom",
-        onEnterBack: () => goToSection(section),
+        ScrollTrigger.create({
+          trigger: section,
+          start: "bottom bottom",
+          onEnterBack: () => goToSection(section),
+        });
       });
-    });
-    // }
+    }
   }
 };
