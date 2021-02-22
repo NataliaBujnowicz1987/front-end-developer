@@ -16,20 +16,16 @@
     <link rel="stylesheet" href="scss/loader.css">
     <script src="https://kit.fontawesome.com/2e296f9362.js" crossorigin="anonymous"></script>
     <script>
-        // window.onbeforeunload = function () {
-        //     window.scrollTo(0, 0);
-        // }
-
         // loading page
-        document.onreadystatechange = function() { 
-            if (document.readyState !== "complete") { 
-                document.querySelector("#portfolio").style.visibility = "hidden"; 
-                document.querySelector("#loader").style.visibility = "visible"; 
-            } else { 
-                document.querySelector("#loader").style.display = "none"; 
-                document.querySelector("#portfolio").style.visibility = "visible"; 
-            } 
-        }; 
+        // document.onreadystatechange = function() { 
+        //     if (document.readyState !== "complete") { 
+        //         document.querySelector("#portfolio").style.visibility = "hidden"; 
+        //         document.querySelector("#loader").style.visibility = "visible"; 
+        //     } else { 
+        //         document.querySelector("#loader").style.display = "none"; 
+        //         document.querySelector("#portfolio").style.visibility = "visible"; 
+        //     } 
+        // }; 
     </script>
 </head>
 
@@ -53,7 +49,7 @@
                     <div class="loader-line"></div>
                 </div>
             </div>
-        </div> 
+    </div> 
 
     <div id='portfolio'>
         <div class="background">
@@ -64,7 +60,7 @@
                 </ul>
             </nav>
             <header>
-                <!-- svg -->
+                <!-- svg from undraw.co-->
                 <div class="bzinka">
                     <svg width="1084" height="819" viewBox="0 0 1084 819" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
@@ -160,15 +156,8 @@
             <!-- Touch Mountains-->
             <div class='portfolio scrollSection'>
                 <div class="portfolio-box">
-                    <!-- img -->
-                    <div class='portfolio-box-content mySlides1'>
-                        <img class='img-desktop' src='./assets/img/mountain.png'
-                            alt="Touch Mountains - desktops device">
-                        <img class='img-mobile' src='./assets/img/mountain-mobile.jpg'
-                            alt="Touch Mountains - mobile device">
-                    </div>
-                    <!-- video -->
-                    <div class="portfolio-box-content mySlides1">
+                     <!-- video -->
+                     <div class="portfolio-box-content mySlides1">
                         <video class='video-desktop' controls muted volume>
                             <source src="./assets/video/touch.mp4" type="video/mp4">
                             Your browser does not support the video tag.
@@ -178,15 +167,25 @@
                             Your browser does not support the video tag.
                         </video>
                     </div>
+                    <!-- img -->
+                    <div class='portfolio-box-content mySlides1'>
+                        <img class='img-desktop' src='./assets/img/mountain.png'
+                            alt="Touch Mountains - desktops device">
+                        <img class='img-mobile' src='./assets/img/mountain-mobile.jpg'
+                            alt="Touch Mountains - mobile device">
+                    </div>
+                   
                     <!-- description -->
-                    <div class='portfolio-box-content txt-scroll mySlides1'>
-                        <h2>Touch Mountains</h2>
-                        <p>The Touch Mountains webpage was created as part of React.js learning. As a true mountain
-                            passionate, I decided to create a beautiful website for the lovers of climbing and
-                            hiking. The idea was to create a webpage for a company that organizes unforgettable trips to the highest mountains
-                            of the world! </p>
-                        <p> Videos, images, and icons are available at: pexels.com,
-                            unsplash.com, and fontawesome.com</p>
+                    <div class='portfolio-box-content mySlides1'>
+                        <div class='portfolio-box-content--txt'>
+                            <h2>Touch Mountains</h2>
+                            <p>The Touch Mountains webpage was created as part of React.js learning. As a true mountain
+                                passionate, I decided to create a beautiful website for the lovers of climbing and
+                                hiking. The idea was to create a webpage for a company that organizes unforgettable trips to the highest mountains
+                                of the world! </p>
+                            <p> Videos, images, and icons are available at: pexels.com,
+                                unsplash.com, and fontawesome.com</p>
+                        </div>
                     </div>
                     <div class="buttons-container">
                         <i onclick="plusSlides(-1, 0)" class="fas fa-long-arrow-alt-left"></i>
@@ -206,12 +205,6 @@
             <!-- Konsultacje Budowlane -->
             <div class='portfolio scrollSection''>
                 <div class="portfolio-box">
-                    <div class="portfolio-box-content mySlides2">
-                        <img class='img-desktop' src='./assets/img/konsultacje.png'
-                            alt="Konsultacje budowlane - desktop device">
-                        <img class='img-mobile' src='./assets/img/konsultacje-mobile.jpg'
-                            alt="Konsultacje budowlane - mobile device">
-                    </div>
                     <div class='portfolio-box-content mySlides2'>
                         <video class=' video-desktop' controls muted>
                             <source src="./assets/video/konsultacje.mp4" type="video/mp4">
@@ -222,15 +215,24 @@
                             Your browser does not support the video tag.
                         </video>
                     </div>
-                    <div class='portfolio-box-content txt-scroll mySlides2'>
-                        <h2>Construction Consultations</h2>
-                        <p> The project created in 2021 for a Polish construction company operating on the market for over 25
-                            years. Specialized in the construction of detached houses, modernization of high-standard
-                            apartments, renovation, etc.</p>
-                        <p> Web technologies such as React.js, Framer Motion, Styled Components were used to create the project.
-                            The main goal of the website was to create a readable, modern, and animated website containing the main
-                            information about the construction company, FAQ section, contact details.
-                        </p>
+                    <div class="portfolio-box-content mySlides2">
+                        <img class='img-desktop' src='./assets/img/konsultacje.png'
+                            alt="Konsultacje budowlane - desktop device">
+                        <img class='img-mobile' src='./assets/img/konsultacje-mobile.jpg'
+                            alt="Konsultacje budowlane - mobile device">
+                    </div>
+                 
+                    <div class='portfolio-box-content  mySlides2'>
+                        <div class='portfolio-box-content--txt'>
+                            <h2>Construction Consultations</h2>
+                            <p> The project created in 2021 for a Polish construction company operating on the market for over 25
+                                years. Specialized in the construction of detached houses, modernization of high-standard
+                                apartments, renovation, etc.</p>
+                            <p> Web technologies such as React.js, Framer Motion, Styled Components were used to create the project.
+                                The main goal of the website was to create a readable, modern, and animated website containing the main
+                                information about the construction company, FAQ section, contact details.
+                            </p>
+                        </div>
                     </div>
                     <div class="buttons-container">
                         <i onclick="plusSlides(-1, 1)" class="fas fa-long-arrow-alt-left"></i>
@@ -248,10 +250,6 @@
             <!-- Music App-->
             <div class='portfolio scrollSection'>
                 <div class="portfolio-box">
-                    <div class='portfolio-box-content mySlides3'>
-                        <img class='img-desktop' src='./assets/img/music.png' alt="Music App - desktop">
-                        <img class='img-mobile' src='./assets/img/music-mobile.jpg' alt="Music App - mobile device">
-                    </div>
                     <div class="portfolio-box-content mySlides3">
                         <video class=' video-desktop' controls>
                             <source src="./assets/video/music.mp4" type="video/mp4">
@@ -262,12 +260,19 @@
                             Your browser does not support the video tag.
                         </video>
                     </div>
-                    <div class='portfolio-box-content txt-scroll mySlides3'>
-                        <h2>Music App</h2>
-                        <p> A lovely music application that lets you choose and play one of the songs from the playlist. It was created
-                            in React.js, as a part of the Creative React and Redux Course</p>
-                        <p>Added features: play/pause music, select song, update time, skip back/forward.</p>
-                        <p>All sounds and images are available on the Chillhop Music platform.</p>
+                    <div class='portfolio-box-content mySlides3'>
+                        <img class='img-desktop' src='./assets/img/music.png' alt="Music App - desktop">
+                        <img class='img-mobile' src='./assets/img/music-mobile.jpg' alt="Music App - mobile device">
+                    </div>
+                  
+                    <div class='portfolio-box-content mySlides3'>
+                        <div class='portfolio-box-content--txt'>
+                            <h2>Music App</h2>
+                            <p> A lovely music application that lets you choose and play one of the songs from the playlist. It was created
+                                in React.js, as a part of the Creative React and Redux Course</p>
+                            <p>Added features: play/pause music, select song, update time, skip back/forward.</p>
+                            <p>All sounds and images are available on the Chillhop Music platform.</p>
+                        </div>
                     </div>
                
                     <div class="buttons-container">
@@ -284,10 +289,6 @@
             <!-- Meditate App-->
             <div class='portfolio scrollSection'>
                 <div class="portfolio-box">
-                    <div class='portfolio-box-content mySlides4'>
-                        <img class='img-desktop' src='./assets/img/meditate.jpg' alt="Meditate App - desktop">
-                        <img class='img-mobile' src='./assets/img/meditate-mobile.jpg' alt="MeditateApp - mobile device">
-                    </div>
                     <div class="portfolio-box-content mySlides4">
                         <video class=' video-desktop'controls>
                             <source src="./assets/video/meditate.mp4" type="video/mp4">
@@ -298,15 +299,22 @@
                             Your browser does not support the video tag.
                         </video>
                     </div>
-                    <div class='portfolio-box-content txt-scroll mySlides4'>
-                        <h2>Meditate App</h2>
-                        <p>MeditateAPP helps keep calm and relax your mind and body... it's so important nowadays. Just play the chosen
-                            sound, watch the video and stay calm, relax and positive.</p>
-                        <p>Application created in HTML, CSS, JavaScript. Added features: select music/video, select duration,
-                            start/stop, page load (css animation).</p>
-                        <p>Images, and icons are available at: pexels.com, pixabay.com, unsplash.com, and
-                            fontawesome.com.
-                        </p>
+                    <div class='portfolio-box-content mySlides4'>
+                        <img class='img-desktop' src='./assets/img/meditate.jpg' alt="Meditate App - desktop">
+                        <img class='img-mobile' src='./assets/img/meditate-mobile.jpg' alt="MeditateApp - mobile device">
+                    </div>
+                
+                    <div class='portfolio-box-content mySlides4'>
+                        <div class='portfolio-box-content--txt'>
+                            <h2>Meditate App</h2>
+                            <p>MeditateAPP helps keep calm and relax your mind and body... it's so important nowadays. Just play the chosen
+                                sound, watch the video and stay calm, relax and positive.</p>
+                            <p>Application created in HTML, CSS, JavaScript. Added features: select music/video, select duration,
+                                start/stop, page load (css animation).</p>
+                            <p>Images, and icons are available at: pexels.com, pixabay.com, unsplash.com, and
+                                fontawesome.com.
+                            </p>
+                        </div>
                     </div>
                     <div class="buttons-container">
                         <i onclick="plusSlides(-1, 3)" class="fas fa-long-arrow-alt-left"></i>
@@ -322,10 +330,6 @@
             <!-- FOXdesign-->
             <div class='portfolio scrollSection'>
                 <div class="portfolio-box">
-                    <div class='portfolio-box-content mySlides5'>
-                        <img class='img-desktop' src='./assets/img/fox.png' alt="FOXdesign - desktop">
-                        <img class='img-mobile' src='./assets/img/fox-mobile.jpg' alt="FOXdesign - mobile device">
-                    </div>
                     <div class="portfolio-box-content mySlides5">
                         <video class=' video-desktop' controls muted>
                             <source src="./assets/video/fox.mp4" type="video/mp4">
@@ -336,14 +340,21 @@
                             Your browser does not support the video tag.
                         </video>
                     </div>
-                    <div class='portfolio-box-content txt-scroll mySlides5'>
-                        <h2>FOXdesign</h2>
-                        <p>Website created for a local web design&development services. Colors used and fox's logo refer to
-                            the town where the company is based - Foxford in Co. Mayo, Ireland. </p>
-                        <p>The main purpose of the website was to display information about the offer, prices, web design
-                            process, etc. The website was created in web technologies like HTML, CSS, JavaScript, and GSAP. </p>
-                        <p>Added animations: GSAP stagger for the main logo, scrollTrigger for appearing text, modal box, slide boxes.
-                            The logo was created as an SVG file in Figma to be able to animate it with GSAP. </p>
+                    <div class='portfolio-box-content mySlides5'>
+                        <img class='img-desktop' src='./assets/img/fox.png' alt="FOXdesign - desktop">
+                        <img class='img-mobile' src='./assets/img/fox-mobile.jpg' alt="FOXdesign - mobile device">
+                    </div>
+                 
+                    <div class='portfolio-box-content mySlides5'>
+                        <div class='portfolio-box-content--txt'>
+                            <h2>FOXdesign</h2>
+                            <p>Website created for a local web design&development services. Colors used and fox's logo refer to
+                                the town where the company is based - Foxford in Co. Mayo, Ireland. </p>
+                            <p>The main purpose of the website was to display information about the offer, prices, web design
+                                process, etc. The website was created in web technologies like HTML, CSS, JavaScript, and GSAP. </p>
+                            <p>Added animations: GSAP stagger for the main logo, scrollTrigger for appearing text, modal box, slide boxes.
+                                The logo was created as an SVG file in Figma to be able to animate it with GSAP. </p>
+                        </div>
                     </div>
                     <div class="buttons-container">
                         <i onclick="plusSlides(-1, 4)" class="fas fa-long-arrow-alt-left"></i>
@@ -359,10 +370,7 @@
             <!-- Stylove-->
             <div class='portfolio scrollSection'> 
                 <div class="portfolio-box">
-                    <div class='portfolio-box-content mySlides6'>
-                        <img class='img-desktop' src='./assets/img/stylove.png' alt="STYLOVE - website">
-                        <img class='img-mobile' src='./assets/img/stylove-mobile.jpg' alt="STYLOVE - mobile device">
-                    </div>
+
                     <div class="portfolio-box-content mySlides6">
                         <video class=' video-desktop' controls muted>
                             <source src="./assets/video/stylove.mp4" type="video/mp4">
@@ -373,16 +381,23 @@
                             Your browser does not support the video tag.
                         </video>
                     </div>
-                    <div class='portfolio-box-content txt-scroll mySlides6'>
+                    <div class='portfolio-box-content mySlides6'>
+                        <img class='img-desktop' src='./assets/img/stylove.png' alt="STYLOVE - website">
+                        <img class='img-mobile' src='./assets/img/stylove-mobile.jpg' alt="STYLOVE - mobile device">
+                    </div>
+                
+                    <div class='portfolio-box-content mySlides6'>
+                        <div class='portfolio-box-content--txt'>
                         <h2>Stylove</h2>
-                        <p>The main goal of the project was to improve my web design nad front-end development skills. The Stylove website
-                            can be used by hair & beauty salons, which can add information about specific services,
-                            history, prices, offers, contact details, gallery, etc.</p>
-                        <p>The Stylove website was created in web technologies such as HTML, CSS, JavaScript. There are added animations
-                            such as moving icons or pop-up modal. </p>
-                        <p>Images, and icons are available at: pexels.com, pixabay.com, unsplash.com, and
-                            fontawesome.com.
-                        </p>
+                            <p>The main goal of the project was to improve my web design nad front-end development skills. The Stylove website
+                                can be used by hair & beauty salons, which can add information about specific services,
+                                history, prices, offers, contact details, gallery, etc.</p>
+                            <p>The Stylove website was created in web technologies such as HTML, CSS, JavaScript. There are added animations
+                                such as moving icons or pop-up modal. </p>
+                            <p>Images, and icons are available at: pexels.com, pixabay.com, unsplash.com, and
+                                fontawesome.com.
+                            </p>
+                        </div>
                     </div>
             
                     <div class="buttons-container">
@@ -420,5 +435,38 @@
     <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/ScrollToPlugin.min.js'></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
     <script src='main.js'></script>
+    <script>
+        // portfolio slider - video-description-img
+        let slideIndex = [1, 1, 1, 1, 1, 1];;
+        const slideId = ["mySlides1", "mySlides2", "mySlides3", "mySlides4", "mySlides5", "mySlides6"]
+
+        showSlides(1, 0);
+        showSlides(1, 1);
+        showSlides(1, 2);
+        showSlides(1, 3);
+        showSlides(1, 4);
+        showSlides(1, 5);
+
+        function plusSlides(n, no) {
+        showSlides(slideIndex[no] += n, no);
+        }
+
+        function showSlides(n, no) {
+        let i;
+        const slides = document.getElementsByClassName(slideId[no]);
+        if (n > slides.length) {
+            slideIndex[no] = 1
+        }
+        if (n < 1) {
+            slideIndex[no] = slides.length
+        }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slides[slideIndex[no] - 1].style.display = "flex";
+        }
+
+    </script>
+
 </body>
 </html>

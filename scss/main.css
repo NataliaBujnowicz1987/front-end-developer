@@ -393,7 +393,6 @@ header h2 {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    padding-top: 1em;
   }
 }
 
@@ -522,7 +521,7 @@ header h2 {
 .portfolio-box-content h2 {
   text-align: center;
   font-size: 1.4em;
-  padding: 1em;
+  padding-bottom: 1em;
 }
 
 @media (min-width: 700px) {
@@ -543,10 +542,24 @@ header h2 {
   }
 }
 
+.portfolio-box-content--txt {
+  overflow: auto;
+  padding: 1.5em;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media (min-width: 700px) {
+  .portfolio-box-content--txt {
+    width: 90%;
+  }
+}
+
 .portfolio-box-content p {
   font-size: 0.8em;
-  width: 80%;
   padding-bottom: 1em;
+  line-height: 1.8em;
 }
 
 @media (min-width: 700px) {
@@ -559,7 +572,6 @@ header h2 {
   .portfolio-box-content p {
     font-size: 0.8em;
     padding-bottom: 1.2em;
-    width: 90%;
   }
 }
 
@@ -575,10 +587,6 @@ header h2 {
   z-index: 1;
   left: 20px;
   top: 10%;
-}
-
-.portfolio-box .txt-scroll {
-  overflow: scroll;
 }
 
 .portfolio-box .buttons-container {
