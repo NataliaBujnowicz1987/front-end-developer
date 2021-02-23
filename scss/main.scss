@@ -397,10 +397,23 @@ header {
                 top: 10%;
             }
         }
+    // scroll bar for chrome
+        ::-webkit-scrollbar {
+            height: 10px;
+            width: 10px;
+            background: #000;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: rgb(19, 17, 17);
+            border-radius: 10px;
+            -webkit-border-radius: 10px;
+        }
+        
+        ::-webkit-scrollbar-corner {
+            background: #000;
+        }
 
-        // .txt-scroll {
-        //     overflow: scroll;
-        // }
         .buttons-container {
             display: flex;
             justify-content: space-between;
@@ -494,6 +507,7 @@ header {
             }
         }
     }
+
 }
 
 footer {
